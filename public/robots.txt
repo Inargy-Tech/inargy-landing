@@ -1,0 +1,6 @@
+# Robots.txt for Inargy - https://inargy.tech
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://inargy.tech/sitemap.xml
