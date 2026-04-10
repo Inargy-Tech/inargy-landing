@@ -24,7 +24,7 @@ export default function TrustBar() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
       >
-        <p className="text-center text-xs font-semibold uppercase tracking-[3px] text-white/30 mb-8">
+        <p className="text-center text-xs font-semibold uppercase tracking-[3px] text-white/55 mb-8">
           Featured In &amp; Trusted By
         </p>
 
@@ -41,7 +41,7 @@ export default function TrustBar() {
                 className="flex items-center justify-center px-10 shrink-0"
               >
                 <span
-                  className={`text-white/25 text-xl select-none whitespace-nowrap hover:text-white/40 transition-colors ${partner.style}`}
+                  className={`text-white/50 text-xl select-none whitespace-nowrap hover:text-white/40 transition-colors ${partner.style}`}
                 >
                   {partner.name}
                 </span>

@@ -92,11 +92,11 @@ export default function Testimonials() {
                   <div className="text-white font-semibold text-sm">
                     {t.name}
                   </div>
-                  <div className="text-white/40 text-xs mt-0.5">
+                  <div className="text-white/55 text-xs mt-0.5">
                     {t.location}
                   </div>
                 </div>
-                <span className="text-[0.65rem] font-bold uppercase tracking-wider text-volt/60 bg-volt/[0.08] px-2.5 py-1 rounded">
+                <span className="text-[0.65rem] font-bold uppercase tracking-wider text-volt/70 bg-volt/10 px-2.5 py-1 rounded">
                   {t.plan}
                 </span>
               </div>

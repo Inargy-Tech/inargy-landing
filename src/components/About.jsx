@@ -25,20 +25,7 @@ export default function About() {
               height={420}
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-green/80 via-slate-green/20 to-transparent" />
-
-            {/* Info badges */}
-            <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
-              <span className="bg-slate-green/70 backdrop-blur-md border border-volt/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg">
-                🚀 Founded 2024
-              </span>
-              <span className="bg-slate-green/70 backdrop-blur-md border border-volt/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg">
-                📍 Lagos, Nigeria
-              </span>
-              <span className="bg-volt/90 text-slate-green text-xs font-bold px-3 py-1.5 rounded-lg">
-                ⚡ Clean Tech Startup
-              </span>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-green/40 via-transparent to-transparent" />
           </div>
 
           {/* Content */}
@@ -60,7 +47,7 @@ export default function About() {
               become irreversible. If this happens, we risk denying present and future
               generations the right to a healthy and sustainable planet &mdash; the whole
               of humanity stands to lose.&rdquo;
-              <footer className="mt-3 text-white/40 text-xs font-semibold not-italic uppercase tracking-wider">
+              <footer className="mt-3 text-white/55 text-xs font-semibold not-italic uppercase tracking-wider">
                 — Kofi Annan, Former UN Secretary-General
               </footer>
             </blockquote>

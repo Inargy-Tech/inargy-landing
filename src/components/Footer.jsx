@@ -54,7 +54,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-dark text-white/55 pt-16 pb-8 px-6">
+    <footer className="bg-slate-dark text-white/70 pt-16 pb-8 px-6">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 pb-10 border-b border-white/[0.06]">
           <div>
@@ -72,7 +72,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Follow Inargy on ${social.name}`}
-                  className="w-9 h-9 rounded-lg bg-white/[0.06] flex items-center justify-center text-white/40 hover:text-volt hover:bg-volt/10 transition-all"
+                  className="w-11 h-11 rounded-lg bg-white/[0.06] flex items-center justify-center text-white/60 hover:text-volt hover:bg-volt/10 transition-all"
                 >
                   {social.icon}
                 </a>
@@ -88,7 +88,7 @@ export default function Footer() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="block text-white/50 text-sm py-1.5 hover:text-volt transition-colors"
+                  className="block text-white/70 text-sm py-2.5 hover:text-volt transition-colors"
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 >
@@ -100,8 +100,12 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 text-xs gap-3">
-          <p>&copy; {new Date().getFullYear()} Inargy. All rights reserved.</p>
-          <p className="text-white/30">Committed to clean energy since 2024.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3">
+            <p>&copy; {new Date().getFullYear()} Inargy Technologies.</p>
+            <span className="hidden sm:inline text-white/20">·</span>
+            <p className="text-white/70">All rights reserved.</p>
+          </div>
+          <p className="text-white/70">Committed to clean energy since 2022.</p>
         </div>
       </div>
     </footer>

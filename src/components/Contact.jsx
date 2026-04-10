@@ -116,9 +116,9 @@ export default function Contact() {
           {submitted ? (
             <div className="bg-white rounded-2xl p-10 border border-border-light flex flex-col items-center justify-center text-center gap-4">
               <CheckCircle size={48} className="text-volt" />
-              <h3 className="text-xl font-bold text-slate-green">Message sent!</h3>
+              <h3 className="text-xl font-bold text-slate-green">Almost there!</h3>
               <p className="text-muted text-sm max-w-[300px]">
-                Your message was opened in WhatsApp. We&apos;ll get back to you as soon as possible.
+                Your message has been prepared in WhatsApp. Please tap &ldquo;Send&rdquo; in the WhatsApp window to complete your enquiry.
               </p>
               <Button
                 className="bg-slate-green text-white font-bold rounded-full px-6 mt-2"

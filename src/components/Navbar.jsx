@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from '@heroui/react'
 import { Menu, X } from 'lucide-react'
 import { Logo, BrandMark } from '../assets/logo'
@@ -14,11 +14,37 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const toggleRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setMenuOpen(false)
+        toggleRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [menuOpen])
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setMenuOpen(false)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   return (
@@ -30,13 +56,12 @@ export default function Navbar() {
       }`}
       aria-label="Main navigation"
     >
-      <div className="max-w-[1200px] mx-auto px-6 h-[72px] flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto px-6 h-[80px] flex items-center justify-between">
         <a href="#home" className="text-white" aria-label="Inargy — go to homepage">
-          <Logo height={28} className="hidden sm:block text-white" />
-          <BrandMark size={36} className="sm:hidden text-white" />
+          <Logo height={40} className="hidden sm:block text-white" />
+          <BrandMark size={44} className="sm:hidden text-white" />
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
             <a
@@ -59,8 +84,8 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button
+          ref={toggleRef}
           className="lg:hidden text-white p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -70,8 +95,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu — CSS-only animation using grid-rows trick */}
       <div
+        inert={!menuOpen || undefined}
         className={`lg:hidden border-t border-volt/10 overflow-hidden transition-[grid-template-rows,opacity] duration-300 ease-in-out grid ${
           menuOpen
             ? 'grid-rows-[1fr] opacity-100'

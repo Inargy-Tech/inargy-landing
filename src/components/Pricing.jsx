@@ -90,6 +90,8 @@ export default function Pricing() {
             <div
               key={plan.name}
               className={`relative transition-all duration-600 ${
+                i === plans.length - 1 ? 'md:col-span-2 md:justify-self-center md:max-w-[440px] lg:col-span-1 lg:max-w-none' : ''
+              } ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-8'

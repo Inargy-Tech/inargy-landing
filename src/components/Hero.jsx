@@ -13,7 +13,7 @@ function SavingsCalculator({ className = '', spend, setSpend, showResult, setSho
       </div>
       <form onSubmit={handleCalculate} className="flex gap-3">
         <div className="relative flex-1">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 text-sm font-bold">₦</span>
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 text-sm font-bold">₦</span>
           <input
             type="text"
             inputMode="numeric"
@@ -25,7 +25,7 @@ function SavingsCalculator({ className = '', spend, setSpend, showResult, setSho
               setSpend(formatted)
               setShowResult(false)
             }}
-            className="w-full bg-slate-green/60 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-sm text-white placeholder:text-white/25 focus:border-volt/40 focus:ring-1 focus:ring-volt/20 outline-none transition-all"
+            className="w-full bg-slate-green/60 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-sm text-white placeholder:text-white/50 focus:border-volt focus:ring-2 focus:ring-volt/40 outline-none transition-all"
             aria-label="Monthly generator or fuel spend in Naira"
           />
         </div>
@@ -95,7 +95,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-[1200px] mx-auto px-6 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="relative max-w-[1200px] mx-auto px-6 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
         {/* Text content */}
         <div className="text-center lg:text-left">
           <div className="inline-flex items-center gap-2 bg-volt/10 border border-volt/20 px-4 py-1.5 rounded-full text-xs font-semibold text-volt uppercase tracking-wider mb-6">
@@ -137,7 +137,7 @@ export default function Hero() {
           </div>
 
           {/* Trust strip */}
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center lg:justify-start text-white/35 text-xs font-medium">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center lg:justify-start text-white/60 text-xs font-medium">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-volt rounded-full" />
               500+ Homes Powered
@@ -182,6 +182,7 @@ export default function Hero() {
               className="w-full h-full object-cover"
               width={440}
               height={440}
+              fetchPriority="high"
             />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-green/60 via-transparent to-transparent" />
