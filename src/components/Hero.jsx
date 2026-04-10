@@ -98,11 +98,6 @@ export default function Hero() {
       <div className="relative max-w-[1200px] mx-auto px-6 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
         {/* Text content */}
         <div className="text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 bg-volt/10 border border-volt/20 px-4 py-1.5 rounded-full text-xs font-semibold text-volt uppercase tracking-wider mb-6">
-            <span className="w-2 h-2 bg-volt rounded-full animate-pulse-dot" />
-            Clean Energy for Africa
-          </div>
-
           <h1 className="text-[clamp(2.8rem,5.5vw,4.2rem)] font-black text-white leading-[1.08] tracking-tight mb-6">
             Democratise{' '}
             <span className="text-volt">energy</span>{' '}
