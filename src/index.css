@@ -12,6 +12,8 @@
   --color-surface: #F8FAF8;
   --color-border: #D5DDD5;
   --color-border-light: #EEF2EE;
+  --color-pantone-green: #72B543;
+  --color-pantone-green-light: #EEF6E8;
 }
 
 html {

@@ -5,60 +5,63 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const plans = [
   {
-    name: 'Lump Sum',
-    desc: 'One-off payment, 0% interest',
+    name: 'Imani',
+    type: 'LUMP SUM',
+    tagline: 'Own your power. Forever.',
+    desc: 'Pay once and own your solar system outright. No obligations, no renewals, just clean, reliable energy that belongs entirely to you from day 0.',
     price: '₦749,999',
     period: 'one-time payment',
-    powers: 'Lights + Fans + TV + Phone Charging',
+    powers: 'Lights + Appliances + More',
     features: [
-      '2 Batteries',
-      '2 Solar Panels (250W)',
-      '1 Inverter (1.5KVa)',
-      '1 MPPT Controller',
-      'Quarterly maintenance',
-      'Upgradable & customizable',
-      'Cashback on recycled batteries',
+      'One-time investment',
+      'Full system ownership',
+      'Highest long-term value',
     ],
     cta: 'Order Now',
     href: WHATSAPP_URL,
+    // Pantone mint green (sampled from PDF)
+    bg: '#D0EBE2',
+    accent: '#1E6E52',
     featured: false,
   },
   {
-    name: 'Monthly Plan',
-    desc: 'No upfront cost, interest-free',
+    name: 'Imole',
+    type: 'ENERGY FINANCING',
+    tagline: 'Your light is coming into focus.',
+    desc: 'Spread your investment over 3–12 months and own your system at the end. Your energy future is already emerging, one payment at a time.',
     price: '₦49,999',
-    period: 'per month · 24-month plan',
-    powers: 'Lights + Fans + TV + Fridge + Laptop',
+    period: 'per month · 3–12 month plan',
+    powers: 'Lights + Appliances + More',
     features: [
-      '2 Batteries',
-      '4 Solar Panels (250W)',
-      '1 Inverter (1.5KVa)',
-      '1 MPPT Controller',
-      '6, 12, or 24-month options',
-      'Quarterly maintenance',
-      'Full ownership at end of term',
+      '3–12 month terms',
+      'Ownership at completion',
+      'Flexible entry point',
     ],
     cta: 'Join Waitlist',
-    href: `${WHATSAPP_URL}?text=${encodeURIComponent("Hi! I'm interested in the Monthly Plan. Please add me to the waitlist.")}`,
+    href: `${WHATSAPP_URL}?text=${encodeURIComponent("Hi! I'm interested in the Imole Energy Financing plan. Please add me to the waitlist.")}`,
+    // Pantone warm peach/sand (sampled from PDF)
+    bg: '#F2E5D3',
+    accent: '#A05C28',
     featured: true,
   },
   {
-    name: 'Energy as a Service',
-    desc: 'Metered hybrid energy leasing',
+    name: 'Imara',
+    type: 'ENERGY AS A SERVICE',
+    tagline: 'Steady power, every single day.',
+    desc: 'Access a fully installed solar system with zero upfront cost. Renew annually and enjoy consistent power supply with maintenance included.',
     price: '₦59,999',
     period: 'per month · yearly renewable',
-    powers: 'Lights + AC + Fridge + Appliances',
+    powers: 'Lights + Appliances + More',
     features: [
-      '2 Batteries',
-      '4 Solar Panels (250W)',
-      '1 Inverter (1.5KVa)',
-      '1 MPPT Controller',
-      'Yearly maintenance included',
-      'Upgradable system',
-      'Cashback on recyclable batteries',
+      'Zero upfront cost',
+      'Annual renewal',
+      'Maintenance included',
     ],
     cta: 'Book Assessment',
     href: WHATSAPP_URL,
+    // Pantone steel blue (sampled from PDF)
+    bg: '#D4E1EE',
+    accent: '#2E5C8A',
     featured: false,
   },
 ]
@@ -74,10 +77,10 @@ export default function Pricing() {
             Pricing
           </span>
           <h2 id="pricing-heading" className="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight text-slate-green leading-tight mb-4">
-            Simple, <span className="text-volt-dim">transparent</span> pricing
+            Three paths to <span className="text-volt-dim">energy independence.</span>
           </h2>
           <p className="text-lg text-muted max-w-[560px] mx-auto leading-relaxed">
-            Choose the plan that works for you. Every plan includes setup, installation, and energy assessment.
+            Every household and business has a different starting point. Inargy meets you exactly where you are — with a plan built for your reality.
           </p>
           <div className="inline-flex items-center gap-2 mt-4 text-xs font-semibold text-slate-green/60 bg-volt/10 px-4 py-2 rounded-full">
             <ShieldCheck size={14} className="text-volt-dim" />
@@ -89,7 +92,7 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <div
               key={plan.name}
-              className={`relative transition-all duration-600 ${
+              className={`relative transition-all duration-600 hover:-translate-y-1 ${
                 i === plans.length - 1 ? 'md:col-span-2 md:justify-self-center md:max-w-[440px] lg:col-span-1 lg:max-w-none' : ''
               } ${
                 isVisible
@@ -100,74 +103,97 @@ export default function Pricing() {
             >
               {plan.featured && (
                 <Chip
-                  className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 bg-volt text-slate-green text-[0.7rem] font-bold uppercase tracking-wider"
-                  size="sm"
+                  className="absolute -top-1 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 text-[0.7rem] font-bold uppercase tracking-wider"
+                  style={{ backgroundColor: plan.accent, color: '#fff' }}
+                  size="lg"
                 >
                   Most Popular
                 </Chip>
               )}
               <Card
-                className={`rounded-2xl p-10 relative transition-all hover:-translate-y-1 ${
+                className={`rounded-2xl p-10 relative transition-all border-0 ${
                   plan.featured
-                    ? 'bg-slate-green text-white border-slate-green lg:scale-[1.02] hover:shadow-2xl hover:shadow-slate-green/20'
-                    : 'bg-white border border-border hover:shadow-xl hover:shadow-slate-green/[0.08]'
+                    ? 'lg:scale-[1.02] hover:shadow-2xl'
+                    : 'hover:shadow-xl'
                 }`}
+                style={{
+                  backgroundColor: plan.bg,
+                  boxShadow: plan.featured ? `0 8px 40px ${plan.bg}99` : undefined,
+                }}
               >
+                {/* Accent bar */}
+                <div className="w-8 h-[3px] rounded-full mb-4" style={{ backgroundColor: plan.accent }} />
 
-              <h3 className={`text-lg font-bold mb-2 ${plan.featured ? 'text-white' : 'text-slate-green'}`}>
-                {plan.name}
-              </h3>
-              <p className={`text-sm mb-6 ${plan.featured ? 'text-white/60' : 'text-muted'}`}>
-                {plan.desc}
-              </p>
+                {/* Plan name */}
+                <h3 className="text-2xl font-extrabold mb-1" style={{ color: plan.accent }}>
+                  {plan.name}
+                </h3>
 
-              <div className={`mb-1 ${plan.featured ? 'text-volt' : 'text-slate-green'}`}>
-                <span className={`text-sm font-medium ${plan.featured ? 'text-white/50' : 'text-muted'}`}>from </span>
-                <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
-              </div>
-              <p className={`text-xs mb-4 ${plan.featured ? 'text-white/50' : 'text-muted'}`}>
-                {plan.period}
-              </p>
+                {/* Type badge */}
+                <span
+                  className="inline-block text-[0.65rem] font-bold uppercase tracking-wider px-2.5 py-1 rounded mb-4"
+                  style={{ backgroundColor: `${plan.accent}18`, color: plan.accent }}
+                >
+                  {plan.type}
+                </span>
 
-              {/* Power capabilities badge */}
-              <div className={`text-xs font-semibold px-3 py-2 rounded-lg mb-6 inline-flex items-center gap-1.5 ${
-                plan.featured
-                  ? 'bg-volt/15 text-volt'
-                  : 'bg-slate-green/[0.06] text-slate-green/70'
-              }`}>
-                ⚡ Powers: {plan.powers}
-              </div>
+                {/* Tagline */}
+                <p className="text-sm italic font-semibold mb-2 text-slate-green">
+                  {plan.tagline}
+                </p>
 
-              <ul className="mb-8 space-y-0">
-                {plan.features.map((f) => (
-                  <li
-                    key={f}
-                    className={`flex items-start gap-2.5 py-2.5 text-sm border-b ${
-                      plan.featured
-                        ? 'text-white/75 border-white/[0.08]'
-                        : 'text-muted-dark border-border-light'
-                    }`}
-                  >
-                    <Check size={16} className="text-volt mt-0.5 shrink-0" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
+                {/* Description */}
+                <p className="text-sm mb-6 leading-relaxed text-muted-dark">
+                  {plan.desc}
+                </p>
 
-              <Button
-                as="a"
-                href={plan.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                fullWidth
-                className={`rounded-full font-bold text-[0.95rem] py-3 transition-all ${
-                  plan.featured
-                    ? 'bg-volt text-slate-green hover:shadow-lg hover:shadow-volt/40'
-                    : 'bg-transparent border-2 border-slate-green text-slate-green hover:bg-slate-green hover:text-white'
-                }`}
-              >
-                {plan.cta}
-              </Button>
+                {/* Price */}
+                <div className="mb-1">
+                  <span className="text-sm font-medium text-muted">from </span>
+                  <span className="text-4xl font-extrabold tracking-tight text-slate-green">{plan.price}</span>
+                </div>
+                <p className="text-xs mb-4 text-muted">
+                  {plan.period}
+                </p>
+
+                {/* Powers badge */}
+                <div
+                  className="text-xs font-semibold px-3 py-2 rounded-lg mb-6 inline-flex items-center gap-1.5"
+                  style={{ backgroundColor: `${plan.accent}14`, color: plan.accent }}
+                >
+                  ⚡ Powers: {plan.powers}
+                </div>
+
+                {/* Features */}
+                <ul className="mb-8 space-y-0">
+                  {plan.features.map((f) => (
+                    <li
+                      key={f}
+                      className="flex items-start gap-2.5 py-2.5 text-sm text-muted-dark border-b"
+                      style={{ borderColor: `${plan.accent}22` }}
+                    >
+                      <Check size={16} className="mt-0.5 shrink-0" style={{ color: plan.accent }} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <Button
+                  as="a"
+                  href={plan.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  fullWidth
+                  className="rounded-full font-bold text-[1.14rem] py-5 px-8 transition-all border-2 hover:opacity-90"
+                  style={{
+                    backgroundColor: plan.accent,
+                    borderColor: plan.accent,
+                    color: '#fff',
+                  }}
+                >
+                  {plan.cta}
+                </Button>
               </Card>
             </div>
           ))}
