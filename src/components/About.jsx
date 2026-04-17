@@ -1,5 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import aboutImage from '../assets/about-solar-team.webp'
+import aboutImage from '../assets/african-solar-team-unbranded.png'
 
 export default function About() {
   const [ref, isVisible] = useScrollReveal()
