@@ -104,7 +104,7 @@ export default function Navbar() {
         }`}
       >
         <div className="min-h-0 overflow-hidden">
-          <div className="px-6 py-6 flex flex-col gap-4 bg-slate-green">
+          <div className="px-6 py-6 flex flex-col gap-4 bg-slate-green min-h-[calc(100dvh-80px)]">
             {links.map((link) => (
               <a
                 key={link.href}
