@@ -77,8 +77,8 @@ export default function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-volt text-slate-green font-bold rounded-full px-6 hover:shadow-lg hover:shadow-volt/30 hover:-translate-y-0.5 transition-all"
-            size="sm"
+            className="bg-volt text-slate-green font-bold rounded-full px-6 min-h-[44px] hover:shadow-lg hover:shadow-volt/30 hover:-translate-y-0.5 transition-all"
+            size="md"
           >
             Get Started
           </Button>
@@ -109,7 +109,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/70 text-sm font-medium hover:text-volt transition-colors"
+                className="text-white/70 text-base font-medium py-2.5 hover:text-volt transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -120,8 +120,8 @@ export default function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-volt text-slate-green font-bold rounded-full hover:shadow-lg hover:shadow-volt/30 transition-all w-full"
-              size="sm"
+              className="bg-volt text-slate-green font-bold rounded-full min-h-[48px] hover:shadow-lg hover:shadow-volt/30 transition-all w-full"
+              size="md"
             >
               Get Started
             </Button>

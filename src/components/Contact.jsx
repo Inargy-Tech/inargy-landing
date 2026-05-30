@@ -103,7 +103,7 @@ export default function Contact() {
                     href={item.href}
                     target={item.href.startsWith('http') ? '_blank' : undefined}
                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-sm text-muted hover:text-slate-green transition-colors"
+                    className="inline-block py-1 text-sm text-muted hover:text-slate-green transition-colors"
                   >
                     {item.content}
                   </a>
@@ -217,7 +217,7 @@ export default function Contact() {
                 type="submit"
                 fullWidth
                 isLoading={sending}
-                className="bg-slate-green text-white font-bold rounded-full py-4 text-base hover:bg-slate-light hover:shadow-lg hover:shadow-slate-green/15 transition-all"
+                className="bg-slate-green text-white font-bold rounded-full min-h-[48px] py-4 text-base hover:bg-slate-light hover:shadow-lg hover:shadow-slate-green/15 transition-all"
               >
                 Send Message
               </Button>
