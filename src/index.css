@@ -6,6 +6,7 @@
   --color-slate-light: #0D3A2F;
   --color-slate-dark: #071F1A;
   --color-volt: #D4ED31;
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
   --color-volt-dim: #6f8a0a;
   --color-muted: #627062;
   --color-muted-dark: #4A5A4A;
@@ -41,6 +42,11 @@ body {
   margin: 0;
   background: #0A2E25;
   color: #0A2E25;
+}
+
+/* Distinctive display face for headings; body stays on Inter */
+h1, h2, h3 {
+  font-family: var(--font-display);
 }
 
 /* Animations */
