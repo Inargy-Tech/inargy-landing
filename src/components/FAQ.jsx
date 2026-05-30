@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { FAQS } from '../config'
+import SectionLabel from './SectionLabel'
 
 function FAQItem({ faq, isOpen, onToggle, index }) {
   return (
@@ -50,9 +51,7 @@ export default function FAQ() {
     <section className="bg-white py-24 px-6" id="faq" aria-labelledby="faq-heading">
       <div className="max-w-[800px] mx-auto" ref={ref}>
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-slate-green bg-slate-green/[0.08] px-4 py-1.5 rounded mb-4">
-            FAQ
-          </span>
+          <SectionLabel>FAQ</SectionLabel>
           <h2
             id="faq-heading"
             className="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight text-slate-green leading-tight mb-4"

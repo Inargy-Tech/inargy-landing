@@ -1,5 +1,6 @@
 import { Zap, Banknote, Wrench, TrendingUp, Recycle, Home } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import SectionLabel from './SectionLabel'
 
 const features = [
   {
@@ -43,9 +44,7 @@ export default function Features() {
         {/* Editorial, left-aligned header: heading and intro side by side */}
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-5 items-end mb-16">
           <div>
-            <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-slate-green bg-slate-green/[0.08] px-4 py-1.5 rounded mb-5">
-              Why Choose Inargy
-            </span>
+            <SectionLabel>Why Choose Inargy</SectionLabel>
             <h2 id="features-heading" className="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight text-slate-green leading-[1.1]">
               Everything you need for clean energy
             </h2>

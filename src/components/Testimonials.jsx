@@ -1,5 +1,6 @@
 import { Star, Quote } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import SectionLabel from './SectionLabel'
 
 const testimonials = [
   {
@@ -49,9 +50,7 @@ export default function Testimonials() {
     <section className="bg-slate-green py-24 px-6" id="testimonials" aria-labelledby="testimonials-heading">
       <div className="max-w-[1200px] mx-auto" ref={ref}>
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-volt bg-volt/10 px-4 py-1.5 rounded mb-4">
-            Testimonials
-          </span>
+          <SectionLabel dark>Testimonials</SectionLabel>
           <h2
             id="testimonials-heading"
             className="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight text-white leading-tight mb-4"

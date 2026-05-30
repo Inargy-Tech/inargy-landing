@@ -1,5 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import aboutImage from '../assets/african-solar-team-unbranded.png'
+import SectionLabel from './SectionLabel'
 
 export default function About() {
   const [ref, isVisible] = useScrollReveal()
@@ -7,9 +8,7 @@ export default function About() {
   return (
     <section className="bg-slate-green py-24 px-6" id="about" aria-labelledby="about-heading">
       <div className="max-w-[1200px] mx-auto" ref={ref}>
-        <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-volt bg-volt/10 px-4 py-1.5 rounded mb-4">
-          About Inargy
-        </span>
+        <SectionLabel dark>About Inargy</SectionLabel>
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-12 transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

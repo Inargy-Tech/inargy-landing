@@ -3,6 +3,7 @@ import { Button } from '@heroui/react'
 import { Mail, Phone, MessageCircle, CheckCircle } from 'lucide-react'
 import { CONTACT, WHATSAPP_URL } from '../config'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import SectionLabel from './SectionLabel'
 
 const contactItems = [
   {
@@ -77,9 +78,7 @@ export default function Contact() {
   return (
     <section className="bg-surface py-24 px-6" id="contact" aria-labelledby="contact-heading">
       <div className="max-w-[1200px] mx-auto" ref={ref}>
-        <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-slate-green bg-slate-green/[0.08] px-4 py-1.5 rounded mb-4">
-          Contact
-        </span>
+        <SectionLabel>Contact</SectionLabel>
         <h2 id="contact-heading" className="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight text-slate-green leading-tight mb-4">
           Get in touch
         </h2>

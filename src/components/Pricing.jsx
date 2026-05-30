@@ -1,5 +1,6 @@
 import { Card, Button, Chip } from '@heroui/react'
 import { Check, ShieldCheck } from 'lucide-react'
+import SectionLabel from './SectionLabel'
 import { WHATSAPP_URL } from '../config'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -73,9 +74,7 @@ export default function Pricing() {
     <section className="bg-white py-24 px-6" id="pricing" aria-labelledby="pricing-heading">
       <div className="max-w-[1200px] mx-auto" ref={ref}>
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-slate-green bg-slate-green/[0.08] px-4 py-1.5 rounded mb-4">
-            Pricing
-          </span>
+          <SectionLabel>Pricing</SectionLabel>
           <h2 id="pricing-heading" className="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight text-slate-green leading-tight mb-4">
             Three paths to <span className="text-volt-dim">energy independence.</span>
           </h2>
