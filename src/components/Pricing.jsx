@@ -41,7 +41,7 @@ const plans = [
     href: `${WHATSAPP_URL}?text=${encodeURIComponent("Hi! I'm interested in the Imole Energy Financing plan. Please add me to the waitlist.")}`,
     // Pantone warm peach/sand (sampled from PDF)
     bg: '#F2E5D3',
-    accent: '#A05C28',
+    accent: '#8A4A1C',
     featured: true,
   },
   {
