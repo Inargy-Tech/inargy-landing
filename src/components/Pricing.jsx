@@ -1,5 +1,5 @@
 import { Card, Button, Chip } from '@heroui/react'
-import { Check, ShieldCheck } from 'lucide-react'
+import { Check, ShieldCheck, Zap } from 'lucide-react'
 import SectionLabel from './SectionLabel'
 import { WHATSAPP_URL } from '../config'
 import { useScrollReveal } from '../hooks/useScrollReveal'
@@ -160,7 +160,7 @@ export default function Pricing() {
                   className="text-xs font-semibold px-3 py-2 rounded-lg mb-6 inline-flex items-center gap-1.5"
                   style={{ backgroundColor: `${plan.accent}14`, color: plan.accent }}
                 >
-                  ⚡ Powers: {plan.powers}
+                  <Zap size={13} className="shrink-0" style={{ color: plan.accent }} /> Powers: {plan.powers}
                 </div>
 
                 {/* Features */}
