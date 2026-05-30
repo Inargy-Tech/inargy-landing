@@ -20,6 +20,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Unified keyboard focus ring for links and buttons.
+   Double ring (volt inner + slate-green outer) stays visible on both the dark
+   brand sections and the light content sections. Form inputs keep their own
+   volt border+ring, so they are excluded here. */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-volt), 0 0 0 4px var(--color-slate-green);
+  border-radius: 6px;
+}
+
 /* Offset scroll targets below fixed navbar */
 section[id] {
   scroll-margin-top: 88px;
