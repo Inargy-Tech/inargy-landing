@@ -150,7 +150,7 @@ export default function Pricing() {
                 {/* Price */}
                 <div className="mb-1">
                   <span className="text-sm font-medium text-muted-dark">from </span>
-                  <span className="text-4xl font-extrabold tracking-tight text-slate-green">{plan.price}</span>
+                  <span className="text-4xl font-extrabold tracking-tight text-slate-green tabular-nums">{plan.price}</span>
                 </div>
                 <p className="text-xs mb-4 text-muted-dark">
                   {plan.period}

@@ -47,6 +47,12 @@ body {
 /* Distinctive display face for headings; body stays on Inter */
 h1, h2, h3 {
   font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+/* Avoid typographic orphans / ragged body copy */
+p {
+  text-wrap: pretty;
 }
 
 /* Animations */

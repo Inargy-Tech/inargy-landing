@@ -23,7 +23,7 @@ export default function Stats() {
             }`}
             style={{ transitionDelay: `${i * 100}ms` }}
           >
-            <div className="text-4xl font-extrabold text-volt tracking-tight" aria-hidden="true">
+            <div className="text-4xl font-extrabold text-volt tracking-tight tabular-nums" aria-hidden="true">
               {stat.value}
             </div>
             <p className="text-white/55 text-xs font-medium uppercase tracking-widest mt-1">
