@@ -24,7 +24,7 @@ export default function Hero() {
 
       <a
         href="#vision"
-        className="group mt-9 inline-flex items-center gap-2 text-sm font-medium text-cream/70 hover:text-volt transition-colors"
+        className="group mt-8 inline-flex items-center gap-2 py-1.5 text-sm font-medium text-cream/70 hover:text-volt transition-colors"
       >
         Read vision
         <ArrowRight

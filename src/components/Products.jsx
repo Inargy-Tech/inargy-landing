@@ -51,7 +51,7 @@ function ProductRow({ product, index }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit ${name} website (opens in new tab)`}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-cream hover:text-volt transition-colors"
+                  className="inline-flex items-center gap-1 py-1.5 text-sm font-medium text-cream hover:text-volt transition-colors"
                 >
                   Website
                   <ArrowUpRight size={14} className="opacity-60" />
