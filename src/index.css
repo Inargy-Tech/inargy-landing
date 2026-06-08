@@ -6,6 +6,7 @@
   --color-slate-light: #0D3A2F;
   --color-slate-dark: #071F1A;
   --color-volt: #D4ED31;
+  --color-cream: #F2F4EF;
   --font-display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
   --color-volt-dim: #6f8a0a;
   --color-muted: #627062;
@@ -19,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 /* Unified keyboard focus ring for links and buttons.
@@ -34,14 +36,15 @@ button:focus-visible {
 
 /* Offset scroll targets below fixed navbar */
 section[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 96px;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
-  background: #0A2E25;
-  color: #0A2E25;
+  background: #071F1A;
+  color: #F2F4EF;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Distinctive display face for headings; body stays on Inter */
@@ -72,14 +75,6 @@ p {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-@keyframes count-up {
-  from { opacity: 0; transform: scale(0.5); }
-  to { opacity: 1; transform: scale(1); }
-}
 
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-spin-slow { animation: spin-slow 30s linear infinite; }
@@ -88,33 +83,9 @@ p {
 .animate-fade-up {
   animation: fade-up 0.6s ease both;
 }
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-
-/* FAQ accordion transitions */
-.faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
-  opacity: 0;
-}
-.faq-answer.open {
-  grid-template-rows: 1fr;
-  opacity: 1;
-}
-.faq-answer > div {
-  overflow: hidden;
-}
-
-/* Marquee: pause on hover for WCAG 2.2.2 */
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
 
 /* Accessibility: reduce motion for vestibular disorders */
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
   .animate-float,
   .animate-spin-slow,
   .animate-spin-slow-reverse,
@@ -123,9 +94,6 @@ p {
   }
   .animate-fade-up {
     animation-duration: 0.01ms !important;
-  }
-  .faq-answer {
-    transition-duration: 0.01ms !important;
   }
   html {
     scroll-behavior: auto;
