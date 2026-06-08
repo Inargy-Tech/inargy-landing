@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom line */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-cream/10 pt-8 text-xs text-cream/40">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-cream/10 pt-8 text-xs text-cream/55">
           <a href="#top" aria-label="Inargy — back to top">
             <Logo height={20} className="text-cream/70 hover:text-cream transition-colors" />
           </a>

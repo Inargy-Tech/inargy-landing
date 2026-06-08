@@ -21,7 +21,7 @@ function ProductRow({ product, index }) {
       <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 lg:items-start">
         {/* Index + brand + sector */}
         <div className="lg:col-span-4 flex items-baseline gap-4">
-          <span className="text-xs font-medium text-cream/30 tabular-nums pt-1">
+          <span className="text-xs font-medium text-cream/50 tabular-nums pt-1">
             {String(index + 1).padStart(2, '0')}
           </span>
           <div>
@@ -42,7 +42,7 @@ function ProductRow({ product, index }) {
         {/* Links */}
         <div className="lg:col-span-3 flex flex-wrap items-center gap-x-6 gap-y-2 lg:justify-end">
           {status === 'soon' ? (
-            <span className="text-sm font-medium text-cream/35">Coming soon</span>
+            <span className="text-sm font-medium text-cream/55">Coming soon</span>
           ) : (
             <>
               {website && (
@@ -74,7 +74,7 @@ export default function Products() {
           <h2 className="text-4xl sm:text-6xl font-display font-medium tracking-[-0.02em] text-cream">
             Products
           </h2>
-          <span className="text-sm sm:text-base font-medium text-cream/30 tabular-nums mb-1.5">
+          <span className="text-sm sm:text-base font-medium text-cream/50 tabular-nums mb-1.5">
             {String(PRODUCTS.length).padStart(2, '0')}
           </span>
         </div>
