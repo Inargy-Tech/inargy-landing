@@ -2,20 +2,11 @@
 @import "@heroui/styles";
 
 @theme inline {
-  --color-slate-green: #0A2E25;
-  --color-slate-light: #0D3A2F;
-  --color-slate-dark: #071F1A;
-  --color-volt: #D4ED31;
-  --color-cream: #F2F4EF;
+  --color-slate-green: #0A2E25; /* focus-ring outer + skip-link */
+  --color-slate-dark: #071F1A;  /* page background + navbar */
+  --color-volt: #D4ED31;        /* brand accent */
+  --color-cream: #F2F4EF;       /* body / display text */
   --font-display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
-  --color-volt-dim: #6f8a0a;
-  --color-muted: #627062;
-  --color-muted-dark: #4A5A4A;
-  --color-surface: #F8FAF8;
-  --color-border: #D5DDD5;
-  --color-border-light: #EEF2EE;
-  --color-pantone-green: #72B543;
-  --color-pantone-green-light: #EEF6E8;
 }
 
 html {

@@ -12,7 +12,7 @@ export default function Vision() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}
       >
-        <SectionLabel dark>Vision</SectionLabel>
+        <SectionLabel>Vision</SectionLabel>
 
         <div className="max-w-[24ch] lg:max-w-none">
           <p className="text-[1.6rem] sm:text-[2.25rem] lg:text-[2.75rem] leading-[1.25] font-display font-medium tracking-[-0.015em] text-cream text-balance">
