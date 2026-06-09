@@ -1,9 +1,9 @@
 import { ArrowUpRight } from 'lucide-react'
 import { PRODUCTS } from '../config'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { FuseLogo, SwitchLogo } from '../assets/productLogos'
+import { FuseLogo, SwitchLogo, PulseLogo } from '../assets/productLogos'
 
-const LOGOS = { fuse: FuseLogo, switch: SwitchLogo }
+const LOGOS = { fuse: FuseLogo, switch: SwitchLogo, pulse: PulseLogo }
 
 function ProductRow({ product, index }) {
   const [ref, isVisible] = useScrollReveal(0.2)

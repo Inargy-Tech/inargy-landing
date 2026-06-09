@@ -4,6 +4,7 @@
 
 const FUSE_AMBER = '#f49e0b'
 const SWITCH_ORANGE = '#ed6a2c'
+const PULSE_CYAN = '#22d3ee'
 
 export function FuseLogo({ className = '' }) {
   return (
@@ -66,6 +67,45 @@ export function SwitchLogo({ className = '' }) {
             marginLeft: '0.06em',
           }}
         />
+      </span>
+    </span>
+  )
+}
+
+export function PulseLogo({ className = '' }) {
+  return (
+    <span
+      className={`inline-flex items-center ${className}`}
+      style={{ gap: '0.05em' }}
+      aria-label="pulse."
+    >
+      <svg
+        viewBox="0 0 160 160"
+        aria-hidden="true"
+        style={{
+          height: '1.1em',
+          width: 'auto',
+          fillRule: 'evenodd',
+          clipRule: 'evenodd',
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
+          display: 'block',
+        }}
+      >
+        <g transform="matrix(1,0,0,1,0,10)">
+          <path
+            d="M24,90L52,90L70,58L82,76L98,30L110,90L136,90"
+            style={{
+              fill: 'none',
+              fillRule: 'nonzero',
+              stroke: PULSE_CYAN,
+              strokeWidth: '9px',
+            }}
+          />
+        </g>
+      </svg>
+      <span style={{ fontFamily: "'Space Grotesk', var(--font-display)", fontWeight: 700, letterSpacing: '-0.03em' }}>
+        pulse<span style={{ color: PULSE_CYAN }}>.</span>
       </span>
     </span>
   )
