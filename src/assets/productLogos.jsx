@@ -92,14 +92,14 @@ export function PulseLogo({ className = '' }) {
           display: 'block',
         }}
       >
-        <g transform="matrix(1,0,0,1,0,10)">
+        <g transform="matrix(1.21864,0,0,1.22446,-218.758,-83.7081)">
           <path
-            d="M24,90L52,90L70,58L82,76L98,30L110,90L136,90"
+            d="M190,150L214,150L228,124L238,140L252,96L262,150L300,150"
             style={{
               fill: 'none',
               fillRule: 'nonzero',
               stroke: PULSE_CYAN,
-              strokeWidth: '9px',
+              strokeWidth: '7px',
             }}
           />
         </g>
